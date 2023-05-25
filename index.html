@@ -26,6 +26,9 @@
      -->
     <link rel="stylesheet" href="css/skeleton-dark.css">
 
+    <!-- Gaming Mode CSS -->
+    <link rel="stylesheet" href="css/gaming-mode.css">
+
     <!-- Brand Styles -->
     <link rel="stylesheet" href="css/brands.css">
 
@@ -37,10 +40,19 @@
 </head>
 
 <body>
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
+    <div class="gaming-mode">
+      <div class="switch-container">
+        <p id="work-text">Work Mode</p>
+        <label class="switch">
+          <input onchange="toggleGamingMode(this.checked)" type="checkbox" />
+          <div></div>
+        </label>
+        <p id="gaming-text">Gaming Mode</p>
+      </div>
+    </div>
     <div class="row">
       <div class="column" style="margin-top: 10%">
 
@@ -101,39 +113,39 @@
         -->
 
         <!-- GitHub -->
-        <a class="button button-github" href="https://sl.vyltech.com/github" target="_blank" rel="noreferrer">
+        <a class="button button-github show-work" href="https://sl.vyltech.com/github" target="_blank" rel="noreferrer">
             <img class="icon" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
-        <br>
+        <br class="show-work">
 
         <!-- Web -->
-        <a class="button button-web" href="" target="_blank" rel="noreferrer">
+        <a class="button button-web show-work" href="" target="_blank" rel="noreferrer">
             <img class="icon" src="images/icons/docusaurus.svg" alt="Docusaurus Logo">Docs&#x1F6A7;</a>
-        <br>
+        <br class="show-work">
 
         <!-- LinkedIn -->
-        <a class="button button-linked" href="https://sl.vyltech.com/linkedin" target="_blank" rel="noreferrer">
+        <a class="button button-linked show-work" href="https://sl.vyltech.com/linkedin" target="_blank" rel="noreferrer">
             <img class="icon" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
-        <br>
+        <br class="show-work">
 
         <!-- Discord -->
-        <a class="button button-discord" href="https://sl.vyltech.com/discord" target="_blank" rel="noreferrer">
+        <a class="button button-discord show-gaming" href="https://sl.vyltech.com/discord" target="_blank" rel="noreferrer">
           <img class="icon" src="images/icons/discord.svg" alt="Discord Logo">Discord</a>
-        <br>
+        <br class="show-gaming">
 
         <!-- Facebook -->
-        <a class="button button-faceb" href="https://sl.vyltech.com/facebook" target="_blank" rel="noreferrer">
+        <a class="button button-faceb show-work" href="https://sl.vyltech.com/facebook" target="_blank" rel="noreferrer">
             <img class="icon"src="images/icons/facebook.svg" alt="Facebook Logo">Facebook</a>
-        <br>
+        <br class="show-work">
 
         <!-- Twitter -->
-        <a class="button button-twit" href="https://sl.vyltech.com/twitter" target="_blank" rel="noreferrer">
+        <a class="button button-twit show-work" href="https://sl.vyltech.com/twitter" target="_blank" rel="noreferrer">
             <img class="icon" src="images/icons/twitter.svg" alt="Twitter Logo">Twitter</a>
-        <br>
+        <br class="show-work">
 
         <!-- Steam -->
-        <a class="button button-steam" href="https://sl.vyltech.com/steam" target="_blank" rel="noreferrer">
+        <a class="button button-steam show-gaming" href="https://sl.vyltech.com/steam" target="_blank" rel="noreferrer">
             <img class="icon" src="images/icons/steam.svg" alt="Steam Logo">Steam</a>
-        <br>
+        <br class="show-gaming">
 
         <!-- Web -->
         <a class="button button-web" href="https://sl.vyltech.com/setup" target="_blank" rel="noreferrer">
@@ -141,9 +153,9 @@
       <br>
 
         <!-- Curriculum Vitae -->
-        <a class="button button-web" href="/extra/CV.pdf" target="_blank" rel="noreferrer">
+        <a class="button button-web show-work" href="/extra/CV.pdf" target="_blank" rel="noreferrer">
           <img class="icon" src="images/icons/read-cv.svg" alt="CV Logo">My Curriculum Vitae</a>
-      <br>
+        <br class="show-work">
 
         <!-- 
             Footer:
@@ -159,6 +171,7 @@
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/gaming-mode.js"></script>
 </body>
 
 </html>
